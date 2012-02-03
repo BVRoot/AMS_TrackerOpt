@@ -82,7 +82,9 @@ for name in group_names :
         res = system(("MultiScenarioAnalysis.py %s -s %s --plot scenarios"
                "  --tick trackruns --titles " + skillTitle + 
                "  --xlabel %s --ticklabels %s --mode ordinal -t '%s'"
-               "  --plotlabels %s --noshow --save %s_%s --type eps") %
+               "  --plotlabels %s --noshow --save %s_%s --type eps"
+               " --filter Tracks+ Splitter+ Merger+ Spurious+"
+               ) %
                 (scenarios, skillScore, fig_title, xlab, ticklabels,
                  runs, labels, name, param))
 

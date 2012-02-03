@@ -101,7 +101,8 @@ param-pages : $(foreach var, $(variables), $(var)-param-page.pdf)
 	MultiSim.py $* $(simcnt) -c $^ --xlims $(xlim) --ylims $(ylim) \
                     --tlims $(tlim_$*) --frames $(framecnt_$*)
 
-CleanSquallSansClutter/MultiSim.ini CleanSquallOverClutter/MultiSim.ini DirtySquallSansClutter/MultiSim.ini DirtySquallOverClutter/MultiSim.ini : BaseSquallClutter.ini
+$(foreach scene, $(SquallClutter_scenarios),\
+          $(scene)/MultiSim.ini) : BaseSquallClutter.ini
 
 $(scenarios) : % : %/MultiSim.ini
 
