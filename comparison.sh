@@ -12,5 +12,5 @@ MultiScenarioAnalysis.py CleanSquall{Sans,Over}Clutter \
                    --plotlabels SCIT TITAN MHT --mode bar \
                    --xlabel Scenarios \
                    --filter Tracks+ Splitter+ Merger+ Spurious+ \
-                   -f 14 4.5 \
-                   --noshow --save TrackerCompare --type eps --bw
+                   -f 15.2 4.5 \
+                   --noshow --save TrackerCompare --type eps
